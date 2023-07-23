@@ -5,9 +5,9 @@
     "email": "Your email",
     "project_short_description": "A short description of the project.",
     "license": [
+        "MIT license",
         "BSD 2-Clause License",
         "BSD 3-Clause License",
-        "MIT license",
         "ISC license",
         "Apache Software License 2.0",
         "GNU Lesser General Public License v3 or later (LGPLv3+)",
