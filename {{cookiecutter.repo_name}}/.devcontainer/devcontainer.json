@@ -10,9 +10,8 @@
 	},
 	"remoteUser": "vscode",
 	// .pre-commit-<uuid> creates a unique cache directory in $HOME/.pre-commit for each project
-	// specify a new uuid per project e.g. using uuidgen
 	"mounts": [
-		"source=${localEnv:HOME}/.pre-commit-bf996cf2-da4e-4d52-a465-028b8b091d15,target=/home/vscode/.pre-commit,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/.pre-commit-{{ uuid4() }},target=/home/vscode/.pre-commit,type=bind,consistency=cached",
 		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
 	],
 	"remoteEnv": {
