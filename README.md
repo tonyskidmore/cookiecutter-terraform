@@ -1,6 +1,7 @@
+# cookiecutter-terraform
+
 [![GitHub Super-Linter](https://github.com/tonyskidmore/cookiecutter-terraform/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
-# cookiecutter-terraform
 
 1. [Overview](#overview)
 2. [Usage](#usage)
@@ -40,7 +41,7 @@ pip install cookiecutter
 
 ````
 
-Then run it against this repo:
+Then run it against this repository:
 
 ````bash
 
@@ -89,7 +90,7 @@ ls
 
 ````
 
-Create a git repo in GitHub and then push to it:
+Create a git repository in GitHub and then push to it:
 
 ````bash
 

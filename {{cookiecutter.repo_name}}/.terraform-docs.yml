@@ -12,10 +12,10 @@ recursive:
   path: examples
 
 sections:
-  hide: []
-  show: []
+  hide: [ ]
+  show: [ ]
 
-{% raw %}
+{% raw %}  # yamllint disable-line
 content: |-
 
   {{ .Header }}
@@ -36,7 +36,7 @@ content: |-
   {{ .Providers }}
 
   {{ .Footer }}
-{% endraw %}
+{% endraw %}  # yamllint disable-line
 
 output:
   file: "README.md"

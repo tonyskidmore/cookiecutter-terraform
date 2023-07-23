@@ -31,9 +31,9 @@ def clean_extra_files():
                 os.remove(file_or_dir)
             else:
                 shutil.rmtree(file_or_dir)
-    except OSError as e:
+    except OSError as err:
         _logger.warning("While attempting to remove file(s) an error occurred")
-        _logger.warning(f"Error: {e}")
+        _logger.warning("Error: %s", err)
         sys.exit(1)
 
 
