@@ -3,18 +3,12 @@
 extends: default
 
 ignore: |
-  /workspace/{{cookiecutter.repo_name}}/.github/workflows/ci.yml
-  /workspace/{{cookiecutter.repo_name}}/.pre-commit-config.yml
-  /workspace/{{cookiecutter.repo_name}}/.terraform-docs.yml
-  {{cookiecutter.repo_name}}/.github/workflows/ci.yml
-  /github/workspace/{{cookiecutter.repo_name}}/.github/workflows/ci.yml
-  /github/workspace/{{cookiecutter.repo_name}}/.pre-commit-config.yml
-  /github/workspace/{{cookiecutter.repo_name}}/.terraform-docs.yml
-  /github/workspace/{{cookiecutter.repo_name}}/.github/workflows/ci.yml
-  '*ci.yml'
+  '*/ci.yml'
   '*.pre-commit-config.yml'
   '*.terraform-docs.yml'
   '*.github/workflows/ci.yml'
+  '/github/workspace/{{cookiecutter.repo_name}}/.github/workflows/ci.yml'
+  '{{cookiecutter.repo_name}}/.github/workflows/ci.yml'
 
 rules:
   line-length:
