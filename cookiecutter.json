@@ -1,0 +1,24 @@
+{
+    "repo_name": "repo_name",
+    "full_name": "Your Name",
+    "github_username": "Your GitHub username",
+    "project_short_description": "A short description of the project.",
+    "license": [
+        "MIT license",
+        "BSD 2-Clause License",
+        "BSD 3-Clause License",
+        "ISC license",
+        "Apache Software License 2.0",
+        "GNU Lesser General Public License v3 or later (LGPLv3+)",
+        "GNU Lesser General Public License v3 (LGPLv3)",
+        "GNU Lesser General Public License v2.1 or later (LGPLv2+)",
+        "GNU Lesser General Public License v2.1 (LGPLv2)",
+        "no"
+    ],
+    "version": "0.0.1",
+    "use_checkov": "y",
+    "use_terrascan": "y",
+    "use_github": "y",
+    "year_from": "{% now 'utc', '%Y' %}",
+    "year_to": "{% now 'utc', '%Y' %}"
+}
