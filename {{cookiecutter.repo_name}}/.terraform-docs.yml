@@ -15,7 +15,7 @@ sections:
   hide: []
   show: []
 
-{% raw %}  # yamllint disable-line rule:yaml-syntax
+{% raw %}
 content: |-
 
   {{ .Header }}
@@ -36,7 +36,7 @@ content: |-
   {{ .Providers }}
 
   {{ .Footer }}
-{% endraw %}  # yamllint disable-line rule:yaml-syntax
+{% endraw %}
 
 output:
   file: "README.md"

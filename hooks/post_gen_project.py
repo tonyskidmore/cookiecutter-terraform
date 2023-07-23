@@ -12,6 +12,26 @@ def log_hook():
     _logger.info("Starting post gen hook")
 
 
+def remove_line(filename, line_to_remove):
+    """Removes a line from a file."""
+
+    # Check if the file exists
+    if not os.path.isfile(filename):
+        _logger.warning("Error: The file %s does not exist.", filename)
+        return
+
+    try:
+        with open(filename, "r", encoding='utf8') as file:
+            lines = file.readlines()
+
+        lines = [line for line in lines if line.strip() != line_to_remove]
+
+        with open(filename, "w", encoding='utf8') as file:
+            file.writelines(lines)
+    except IOError as err:
+        _logger.warning("Error: Unable to open the file %s. %s", filename, err)
+
+
 def clean_extra_files():
     """Removes either requirements files and folder or the Pipfile."""
     to_delete = []
@@ -40,3 +60,4 @@ def clean_extra_files():
 if __name__ == "__main__":
     log_hook()
     clean_extra_files()
+    remove_line(".devcontainer/init.sh", "# shellcheck disable=all")
