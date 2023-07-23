@@ -35,6 +35,9 @@ jobs:
           VALIDATE_JSCPD: false
           VALIDATE_TERRAFORM_TERRASCAN: false
           VALIDATE_GITLEAKS: false
+          # revisit this
           VALIDATE_YAML: false
+          # need to find out to ignore templated file
+          VALIDATE_GITHUB_ACTIONS: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
