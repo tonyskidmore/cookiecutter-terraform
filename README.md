@@ -9,7 +9,9 @@
 ## Overview
 
 A [cookiecutter](https://github.com/cookiecutter/cookiecutter) Terraform template for Azure modules or projects.
-This is a templated content to instantiate new Azure Terraform content and saves having to go through constructing boilerplate content for new projects.
+This is a templated content to instantiate new Azure Terraform content and saves having to go through constructing boilerplate content for new projects.  
+
+> This is opinionated and in fairly early stages of development
 
 
 ## Usage
