@@ -43,7 +43,9 @@ output:
   mode: inject
   template: |-
     <!-- BEGIN_TF_DOCS -->
+{% raw %}
     {{ .Content }}
+{% endraw %}
     <!-- END_TF_DOCS -->
 
 output-values:
