@@ -98,15 +98,15 @@ git push -u origin main
 The table below provides further details on how the prompted values are used.
 These are configured in the `cookiecutter.json` file.
 
-| option                    | description                                                   |
-|---------------------------|---------------------------------------------------------------|
-| repo_name                 | The repo name will be used to create the output directory     |
-| full_name                 | Your fullname e.g. Tony Skidmore                              |
-| github_username           | Used in documentation e.g. constructing repo URLs             |
-| project_short_description | Used in the header of the generated README.md                 |
-| license                   | The type of license file to be created.  no = no LICENSE file |
-| version                   | The starting version of the project, use in CHANGELOG         |
-| use_checkov               | Enable Bridgecrew Checkov functionality                       |
-| use_terrascan             | Enable Tenable Terrascan functionality                        |
-| use_github                | Whether the `.github` directory is created                    |
-| year_from and year_to     | Used in the creation of the LICENSE file                      |
+| option                    | description                                                     |
+|---------------------------|-----------------------------------------------------------------|
+| repo_name                 | The repo name will be used to create the output directory       |
+| full_name                 | Your fullname e.g. Tony Skidmore                                |
+| github_username           | Used in documentation e.g. tonyskidmore                         |
+| project_short_description | Used in the header of the generated README.md                   |
+| license                   | The type of license file to be created.  `no` = no LICENSE file |
+| version                   | The starting version of the project, use in CHANGELOG           |
+| use_checkov               | Enable Bridgecrew Checkov functionality                         |
+| use_terrascan             | Enable Tenable Terrascan functionality                          |
+| use_github                | Whether the `.github` directory is created                      |
+| year_from and year_to     | Used in the creation of the LICENSE file                        |

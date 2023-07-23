@@ -7,5 +7,5 @@ then
   sudo chown vscode:vscode "$HOME/.pre-commit"
   pre-commit install
   pre-commit install-hooks
-  {% if cookiecutter.use_terrascan == "y" %}terrascan init{% endif %}
+{% if cookiecutter.use_terrascan == "y" %}  terrascan init{% endif %}
 fi
