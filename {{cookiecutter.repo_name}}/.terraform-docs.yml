@@ -15,6 +15,7 @@ sections:
   hide: []
   show: []
 
+{% raw %}
 content: |-
 
   {{ .Header }}
@@ -35,7 +36,7 @@ content: |-
   {{ .Providers }}
 
   {{ .Footer }}
-
+{% endraw %}
 
 output:
   file: "README.md"
