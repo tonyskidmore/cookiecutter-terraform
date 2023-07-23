@@ -1,0 +1,8 @@
+---
+directory:
+  - .
+
+skip-check:
+  # - CKV2_AZURE_1  # "Ensure storage for critical data are encrypted with Customer Managed Key"
+  # - CKV_GHA_*
+  # - CKV2_GHA_*
