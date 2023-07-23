@@ -44,10 +44,9 @@ Answer the prompts with your own options. For example, creating a Terraform Azur
 
 ````bash
 
-project_name [project_name]: terraform-azurerm-machine-learning
 repo_name [repo_name]: terraform-azurerm-machine-learning
 full_name [Your Name]: Tony Skidmore
-email [Your email]: 16082810+tonyskidmore@users.noreply.github.com
+github_username [Your GitHub username]: tonyskidmore
 project_short_description [A short description of the project.]: Terraform module for Azure Machine Learning
 Select license:
 1 - BSD 2-Clause License
@@ -64,6 +63,7 @@ Choose from 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 [1]: 3
 version [0.0.1]:
 use_checkov [y]:
 use_terrascan [y]: n
+use_github [y]: y
 year_from [2023]:
 year_to [2023]:
 
@@ -100,6 +100,7 @@ These are configured in the `cookiecutter.json` file.
 |---------------------------|---------------------------------------------------------------|
 | repo_name                 | The repo name will be used to create the output directory     |
 | full_name                 | Your fullname e.g. Tony Skidmore                              |
+| github_username           | Used in documentation e.g. constructing repo URLs             |
 | project_short_description | Used in the header of the generated README.md                 |
 | license                   | The type of license file to be created.  no = no LICENSE file |
 | version                   | The starting version of the project, use in CHANGELOG         |
