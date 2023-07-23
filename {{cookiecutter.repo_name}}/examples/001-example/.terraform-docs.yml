@@ -16,7 +16,7 @@ sections:
   show: []
 
 content: |-
-  {% raw %}
+{% raw %}
   {{ .Header }}
   {{ .Requirements }}
   {{ .Providers }}
@@ -24,7 +24,7 @@ content: |-
   {{ .Inputs }}
   {{ .Outputs }}
   {{ .Footer }}
-  {% endraw %}
+{% endraw %}
   Example
 
   ```hcl
@@ -35,9 +35,9 @@ output:
   mode: inject
   template: |-
     <!-- BEGIN_TF_DOCS -->
-    {% raw %}
+{% raw %}
     {{ .Content }}
-    {% endraw %}
+{% endraw %}
     <!-- END_TF_DOCS -->
 output-values:
   enabled: false
