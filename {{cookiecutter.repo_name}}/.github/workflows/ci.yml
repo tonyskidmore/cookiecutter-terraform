@@ -39,9 +39,7 @@ jobs:
           VALIDATE_TERRAFORM_TERRASCAN: false
           VALIDATE_GITLEAKS: false
           DEFAULT_BRANCH: main
-{% raw %}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-{% endraw %}
+          {% raw %}GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}{% endraw %}
 
   precommit:
     name: pre-commit
