@@ -7,8 +7,6 @@ ignore: |
   '*.pre-commit-config.yml'
   '*.terraform-docs.yml'
   '*.github/workflows/ci.yml'
-  '/github/workspace/{{cookiecutter.repo_name}}/.github/workflows/ci.yml'
-  '{{cookiecutter.repo_name}}/.github/workflows/ci.yml'
 
 rules:
   line-length:
