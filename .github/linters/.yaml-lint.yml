@@ -3,6 +3,9 @@
 extends: default
 
 ignore: |
+  '/workspace/{{cookiecutter.repo_name}}/.github/workflows/ci.yml'
+  '/workspace/{{cookiecutter.repo_name}}/.pre-commit-config.yml'
+  '/workspace/{{cookiecutter.repo_name}}/.terraform-docs.yml'
   '*/ci.yml'
   '*.pre-commit-config.yml'
   '*.terraform-docs.yml'
