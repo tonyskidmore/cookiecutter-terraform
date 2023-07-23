@@ -28,7 +28,7 @@ content: |-
   Example
 
   ```hcl
-  {{ include "./main.tf" }}
+  {% raw %}{{ include "./main.tf" }}{% endraw %}
   ```
 output:
   file: "README.md"
