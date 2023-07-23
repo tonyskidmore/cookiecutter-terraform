@@ -21,12 +21,12 @@ def remove_line(filename, line_to_remove):
         return
 
     try:
-        with open(filename, "r", encoding='utf8') as file:
+        with open(filename, "r", encoding="utf8") as file:
             lines = file.readlines()
 
         lines = [line for line in lines if line.strip() != line_to_remove]
 
-        with open(filename, "w", encoding='utf8') as file:
+        with open(filename, "w", encoding="utf8") as file:
             file.writelines(lines)
     except IOError as err:
         _logger.warning("Error: Unable to open the file %s. %s", filename, err)

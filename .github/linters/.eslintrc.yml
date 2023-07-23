@@ -2,3 +2,4 @@
 
 ignorePatterns:
   - "**/.devcontainer/.*"
+  - "cookiecutter.json"
