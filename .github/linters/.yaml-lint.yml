@@ -2,6 +2,11 @@
 
 extends: default
 
+ignore: |
+  {{cookiecutter.repo_name}}/.github/workflows/ci.yml
+  {{cookiecutter.repo_name}}/.pre-commit-config.yml
+  {{cookiecutter.repo_name}}/.terraform-docs.yml
+
 rules:
   line-length:
     max: 130

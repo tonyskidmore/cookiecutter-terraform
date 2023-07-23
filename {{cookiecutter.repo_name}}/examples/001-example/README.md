@@ -1,6 +1,6 @@
 # 001-example
 
-This is a minimal example of using the content in this repo
+This is a minimal example of using the content in this repository.
 
 ````bash
 
