@@ -39,7 +39,7 @@ jobs:
           VALIDATE_TERRAFORM_TERRASCAN: false
           VALIDATE_GITLEAKS: false
           DEFAULT_BRANCH: main
-          {% raw %}GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}{% endraw %} # yamllint disable-line
+          {% raw %}GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}{% endraw %} # yamllint disable-line rule:yaml-syntax
 
   precommit:
     name: pre-commit

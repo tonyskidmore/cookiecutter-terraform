@@ -12,8 +12,8 @@ recursive:
   path: modules
 
 sections:
-  hide: [ ]
-  show: [ ]
+  hide: []
+  show: []
 
 content: |-
   {% raw %}

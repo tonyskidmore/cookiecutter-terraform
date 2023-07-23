@@ -110,7 +110,7 @@ These are configured in the `cookiecutter.json` file.
 
 | option                    | description                                                     |
 |---------------------------|-----------------------------------------------------------------|
-| repo_name                 | The repo name will be used to create the output directory       |
+| repo_name                 | The repository name will be used to create the output directory |
 | full_name                 | Your fullname e.g. Tony Skidmore                                |
 | github_username           | Used in documentation e.g. tonyskidmore                         |
 | project_short_description | Used in the header of the generated README.md                   |
