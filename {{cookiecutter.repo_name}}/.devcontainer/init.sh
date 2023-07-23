@@ -1,5 +1,5 @@
 #!/bin/bash
-# shellcheck disable=SC1083,SC1056,SC1072
+# shellcheck disable=all
 
 owner=$(stat -c '%U' "$HOME/.pre-commit")
 

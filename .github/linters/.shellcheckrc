@@ -1,3 +1,0 @@
-
-# disable errors relating to Jinja2 templating
-disable=SC1083,SC1056,SC1072
