@@ -11,6 +11,16 @@
 A [cookiecutter](https://github.com/cookiecutter/cookiecutter) Terraform template for Azure modules or projects.
 This is a templated content to instantiate new Azure Terraform content and saves having to go through constructing boilerplate content for new projects.  
 
+The output from this cookiecutter template has the following features (some optional) basically confgured:
+
+* Terraform related [devcontainers](https://github.com/devcontainers/) devcontainer.
+* Terraform enabled [pre-commit](https://pre-commit.com).
+* [TFLint](https://github.com/terraform-linters/tflint) configured for Azure.
+* Tenable [terrascan](https://github.com/tenable/terrascan).
+* Bridgecrew [Checkov](https://github.com/bridgecrewio/checkov).
+* GitHub content including a workflow that includes linting and pre-commit.
+
+
 > This is opinionated and in fairly early stages of development
 
 
