@@ -17,11 +17,13 @@ def clean_extra_files():
     to_delete = []
 
     if "{{ cookiecutter.use_checkov }}".lower() == "n":
-        to_delete = to_delete + [".checkov.yml"]
-        # TODO: remove checkov from .pre-commit-config.yaml
+        to_delete.append(".checkov.yml")
 
     if "{{ cookiecutter.license }}".lower() == "no":
-        to_delete = to_delete + ["LICENSE"]
+        to_delete.append("LICENSE")
+
+    if "{{ cookiecutter.use_github }}".lower() == "n":
+        to_delete.append(".github")
 
     try:
         for file_or_dir in to_delete:
