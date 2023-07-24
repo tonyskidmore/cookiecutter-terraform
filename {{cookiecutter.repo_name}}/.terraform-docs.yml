@@ -24,7 +24,7 @@ content: |-
 
   ```hcl
 
-  {{ include "examples/001-admin_password/main.tf" }}
+  {{ include "examples/001-example/main.tf" }}
 
   ```
   {{ .Resources }}
