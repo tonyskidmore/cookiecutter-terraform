@@ -95,7 +95,7 @@ Create a git repository in GitHub and then push to it:
 
 ````bash
 
-git init
+# git init
 git add .
 git commit -m "first commit"
 git branch -M main
@@ -103,6 +103,7 @@ git remote add origin git@github.com:tonyskidmore/terraform-azurerm-machine-lear
 git push -u origin main
 
 ````
+
 
 ## Options
 
@@ -131,3 +132,14 @@ the created repo path and will subsequently get included in the generated docker
 For example enter `~/certs/zscaler.crt` for that certificate to be included in the devcontainer image.
 
 _Note:_ ensure that the PEM encoded certificate file has a .crt extension for it be recognized correctly.
+
+
+## Development
+
+To test against a development branch use:
+
+````bash
+
+cookiecutter https://github.com/tonyskidmore/cookiecutter-terraform --checkout feature_branch
+
+````
