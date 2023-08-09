@@ -20,5 +20,6 @@
     "use_terrascan": "y",
     "use_github": "y",
     "year_from": "{% now 'utc', '%Y' %}",
-    "year_to": "{% now 'utc', '%Y' %}"
+    "year_to": "{% now 'utc', '%Y' %}",
+    "devcontainer_certs": ""
 }
