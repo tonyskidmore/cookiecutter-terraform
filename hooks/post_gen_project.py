@@ -88,7 +88,7 @@ def copy_certs():
 
     # pylint: disable=use-implicit-booleaness-not-len
     if len("{{ cookiecutter.devcontainer_certs }}"):
-        copy_files("{{ cookiecutter.devcontainer_certs }}", "certs/")
+        copy_files("{{ cookiecutter.devcontainer_certs }}", ".devcontainer/certs/")
 
 
 if __name__ == "__main__":
