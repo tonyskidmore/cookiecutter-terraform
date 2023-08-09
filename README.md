@@ -78,6 +78,7 @@ use_terrascan [y]: n
 use_github [y]: y
 year_from [2023]:
 year_to [2023]:
+devcontainer_certs []: 
 
 ````
 
@@ -120,3 +121,13 @@ These are configured in the `cookiecutter.json` file.
 | use_terrascan             | Enable Tenable Terrascan functionality                          |
 | use_github                | Whether the `.github` directory is created                      |
 | year_from and year_to     | Used in the creation of the LICENSE file                        |
+| devcontainer_certs        | Any certificates that should be copied to the devcontainer      |
+
+Enterprise proxies, such as Zscaler, terminate and insert their own certificate chains into TLS traffic.
+This can cause certificate errors in applications, such as those used within a devcontainer.
+Specifying a path to a certificate file will cause the file to be copied to .devcontainer/certs in
+the created repo path and will subsequently get included in the generated docker container image.  
+
+For example enter `~/certs/zscaler.crt` for that certificate to be included in the devcontainer image.
+
+_Note:_ ensure that the PEM encoded certificate file has a .crt extension for it be recognized correctly.
