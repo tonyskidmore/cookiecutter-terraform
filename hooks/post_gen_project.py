@@ -85,7 +85,9 @@ def clean_extra_files():
 
 def copy_certs():
     """Copies the certs from the devcontainer to the project"""
-    if len("{{ cookiecutter.devcontainer_certs }}") > 0:
+
+    # pylint: disable=use-implicit-booleaness-not-len
+    if len("{{ cookiecutter.devcontainer_certs }}"):
         copy_files("{{ cookiecutter.devcontainer_certs }}", "certs/")
 
 
