@@ -1,4 +1,5 @@
 """Post gen hook to clean files."""
+import glob
 import logging
 import os
 import shutil
@@ -32,6 +33,31 @@ def remove_line(filename, line_to_remove):
         _logger.warning("Error: Unable to open the file %s. %s", filename, err)
 
 
+def copy_files(source, destination):
+    """Copies files from source to destination."""
+
+    # expand the paths
+    source = os.path.expanduser(source)
+    destination = os.path.expanduser(destination)
+
+    # If source is a glob pattern, expand it
+    files_to_copy = glob.glob(source)
+
+    # If there are no matches for the pattern, print a message and return
+    if not files_to_copy:
+        print(f"No files found for the pattern: {source}")
+        return
+
+    # Ensure that the destination is a directory, creating it if necessary
+    if not os.path.exists(destination):
+        os.makedirs(destination)
+
+    # Iterate over the files and copy them to the destination
+    for file in files_to_copy:
+        shutil.copy(file, destination)
+        print(f"Copied {file} to {destination}")
+
+
 def clean_extra_files():
     """Removes either requirements files and folder or the Pipfile."""
     to_delete = []
@@ -57,7 +83,16 @@ def clean_extra_files():
         sys.exit(1)
 
 
+def copy_certs():
+    """Copies the certs from the devcontainer to the project"""
+
+    # pylint: disable=use-implicit-booleaness-not-len
+    if len("{{ cookiecutter.devcontainer_certs }}"):
+        copy_files("{{ cookiecutter.devcontainer_certs }}", ".devcontainer/certs/")
+
+
 if __name__ == "__main__":
     log_hook()
     clean_extra_files()
+    copy_certs()
     remove_line(".devcontainer/init.sh", "# shellcheck disable=all")

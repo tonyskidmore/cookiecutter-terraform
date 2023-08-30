@@ -17,8 +17,9 @@
     ],
     "version": "0.0.1",
     "use_checkov": "y",
-    "use_terrascan": "y",
+    "use_terrascan": "n",
     "use_github": "y",
     "year_from": "{% now 'utc', '%Y' %}",
-    "year_to": "{% now 'utc', '%Y' %}"
+    "year_to": "{% now 'utc', '%Y' %}",
+    "devcontainer_certs": ""
 }

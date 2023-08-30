@@ -1,18 +1,20 @@
 {
-	"image": "ghcr.io/tonyskidmore/devcontainers-terraform:latest",
+	"build": { "dockerfile": "Dockerfile" },
 	"features": {
-			"ghcr.io/devcontainers/features/docker-in-docker:1": {
-				"version": "latest"
-			},
-			"ghcr.io/devcontainers/features/docker-from-docker:1": {
-				"version": "latest"
-			}
+		"ghcr.io/devcontainers/features/docker-in-docker:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/docker-from-docker:1": {
+			"version": "latest"
+		}
 	},
 	"remoteUser": "vscode",
-	// .pre-commit-<uuid> creates a unique cache directory in $HOME/.pre-commit for each project
+	// .pre-commit-<uuid> creates a unique cache directory in $HOME/.pre-commit for each project - uuid4() is a cookiecutter function
+	// also mount .ssh and .config/git to avoid having to re-enter credentials
 	"mounts": [
 		"source=${localEnv:HOME}/.pre-commit-{{ uuid4() }},target=/home/vscode/.pre-commit,type=bind,consistency=cached",
-		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached",
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.config/git,target=/home/vscode/.config/git,type=bind,consistency=cached,readonly"
 	],
 	"remoteEnv": {
 		"PRE_COMMIT_HOME": "/home/vscode/.pre-commit"
@@ -26,7 +28,7 @@
 				"ms-azuretools.vscode-azureterraform",
 				"shardulm94.trailing-spaces",
 				"streetsidesoftware.code-spell-checker",
-				"wwm.better-align"
+				"chouzz.vscode-better-align"
 			]
 		}
 	}
