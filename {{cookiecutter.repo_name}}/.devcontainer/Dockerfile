@@ -6,6 +6,8 @@ ARG TERRAFORM_VERSION="1.5.4"
 FROM ${IMAGE_REPO}:${IMAGE_VERSION} AS builder
 ARG TERRAFORM_VERSION
 
+
+
 # https://releases.hashicorp.com/terraform/1.5.3/terraform_1.5.3_linux_amd64.zip
 # Terraform
 RUN wget --quiet https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
@@ -30,11 +32,9 @@ ENV REQUESTS_CA_BUNDLE="/etc/ssl/certs/ca-certificates.crt"
 ENV SSL_CERT_FILE="/etc/ssl/certs/ca-certificates.crt"
 ENV NODE_EXTRA_CA_CERTS="/etc/ssl/certs/ca-certificates.crt"
 
-RUN update-ca-certificates
-
-RUN echo "APT::Get::Assume-Yes \"true\";" > /etc/apt/apt.conf.d/90assumeyes
-
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN update-ca-certificates && \
+    echo "APT::Get::Assume-Yes \"true\";" > /etc/apt/apt.conf.d/90assumeyes && \
+    apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \
     apt-transport-https \
@@ -50,7 +50,7 @@ ENV PIPX_BIN_DIR=/usr/local/bin
 
 # install pre-commit
 RUN python3 -m pip install pipx && \
-    pipx install pre-commit
+    pipx install pre-commit==3.3.3
 
 # Install Azure CLI system level
 RUN curl -sL https://packages.microsoft.com/keys/microsoft.asc | \
